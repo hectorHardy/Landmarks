@@ -1,0 +1,31 @@
+//
+//  LandmarkRow.swift
+//  Landmarks
+//
+//  Created by Hector Hardy on 30/09/2025.
+//
+
+import SwiftUI
+
+struct LandmarkRow: View {
+    var landmark: Landmark
+    
+    var body: some View {
+        HStack {
+            landmark.image
+                .resizable()
+                .frame(width: 50, height: 50)
+            
+            Text(landmark.name)
+            
+            Spacer()
+        }
+    }
+}
+
+#Preview("Turtle Rock adnd salmon") {
+    Group {
+        LandmarkRow(landmark: landmarks[0])
+        LandmarkRow(landmark: landmarks[1])
+    }
+}
