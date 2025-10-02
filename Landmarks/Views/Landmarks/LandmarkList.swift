@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// displays a list of LocationRow elements, wrapped in NavigationLinks and allows filtering by favourite.
 struct LandmarkList: View {
     @Environment(ModelData.self) var modelData
     @State private var showFavoritesOnly = false
@@ -33,7 +34,7 @@ struct LandmarkList: View {
             .animation(.default, value: filteredLandmarks)
             .navigationTitle("Landmarks")
         } detail: {
-            Text("Select a landmark")
+            Text("Select a landmark") // displayed on Ipad / aids accessibility
         }
     }
 }

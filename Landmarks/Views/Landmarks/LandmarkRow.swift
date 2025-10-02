@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// defines structure of how each landmark is displayed in the list
 struct LandmarkRow: View {
     var landmark: Landmark
     

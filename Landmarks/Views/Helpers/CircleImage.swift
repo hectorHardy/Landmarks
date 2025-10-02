@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Creates the circular layout for eac LandmarkDetail image. 
 struct CircleImage: View {
     var image: Image
     

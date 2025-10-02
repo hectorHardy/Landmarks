@@ -8,6 +8,7 @@
 import SwiftUI
 import MapKit
 
+//Displays a map centred on the given Coordinates
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
     
@@ -18,7 +19,7 @@ struct MapView: View {
     private var region: MKCoordinateRegion {
         MKCoordinateRegion(
             center: coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2) // the "zoom" of the map
         )
     }
     

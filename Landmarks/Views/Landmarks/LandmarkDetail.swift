@@ -7,12 +7,13 @@
 
 import SwiftUI
 
+//retrieves and displays data for location provided.
 struct LandmarkDetail: View {
-    @Environment(ModelData.self) var modelData
+    @Environment(ModelData.self) var modelData // holds the data retrieved from JSON file on each landmark
     var landmark: Landmark
     
     var landmarkIndex: Int {
-        modelData.landmarks.firstIndex(where: { $0.id == landmark.id})!
+        modelData.landmarks.firstIndex(where: { $0.id == landmark.id})! //finds first instance of location
     }
     
     var body: some View {
@@ -30,7 +31,7 @@ struct LandmarkDetail: View {
                 HStack {
                     Text(landmark.name)
                         .font(.title)
-                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite) // adds star if location is favourited
                 }
                 HStack {
                     Text(landmark.park)

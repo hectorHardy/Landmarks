@@ -7,6 +7,7 @@
 
 import Foundation
 
+//retrieves Landmark data from the JSON file
 @Observable
 class ModelData {
     var landmarks: [Landmark] = load("landmarkData.json")

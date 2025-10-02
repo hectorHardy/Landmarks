@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Creates a faavourite button by embedding the start.fill systemImage in a SwiftUi Button, changes colour depending on state.
 struct FavoriteButton: View {
     @Binding var isSet: Bool
     

@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
+// defines what a Landmark is and initialises each instance
 struct Landmark: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
